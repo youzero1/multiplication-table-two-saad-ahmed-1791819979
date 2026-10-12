@@ -1,11 +1,12 @@
 ---
-status: pending
+status: implemented
 title: Multiple Themes for the Table of 2
 option: preset-themes :: Preset theme gallery :: A row of named themes (Light, Dark, Ocean, Sunset, Forest) that instantly restyle the whole page and table.
 option: dark-light-toggle :: Dark & light toggle :: One simple toggle button that flips the app between a light look and a dark look.
 option: custom-accent-picker :: Custom accent picker :: Pick your own accent color from swatches and the table, headings, and highlights adopt it.
 option: animated-gradients :: Animated gradient themes :: Playful themes with slowly shifting gradient backgrounds behind the table card.
 recommended: preset-themes
+selected: preset-themes
 ---
 
 Add theming to the multiplication table app so the user can change how it looks. The table content stays the same; only the colors (and in one option, animated backgrounds) change.

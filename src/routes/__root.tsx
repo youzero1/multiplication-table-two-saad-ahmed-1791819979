@@ -1,4 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
+import { ThemeProvider, useTheme } from '@/lib/theme';
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -9,7 +10,18 @@ export const Route = createRootRoute({
 // <Outlet /> is where the matched page renders.
 function RootLayout() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-slate-50 to-sky-100 p-6">
+    <ThemeProvider>
+      <ThemedShell />
+    </ThemeProvider>
+  );
+}
+
+function ThemedShell() {
+  const { theme } = useTheme();
+  return (
+    <div
+      className={`flex min-h-screen items-center justify-center p-6 transition-colors duration-500 ${theme.palette.page}`}
+    >
       <Outlet />
     </div>
   );
