@@ -1,13 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { MultiplicationTable } from '@/components/MultiplicationTable';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
 });
 
 function HomePage() {
-  return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl font-semibold">Table of 2 — multiplication facts</h1>
-    </div>
-  );
+  return <MultiplicationTable base={2} />;
 }

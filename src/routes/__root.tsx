@@ -8,7 +8,11 @@ export const Route = createRootRoute({
 // The app shell: anything rendered here (nav, footer, providers) appears on every page.
 // <Outlet /> is where the matched page renders.
 function RootLayout() {
-  return <Outlet />;
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-slate-50 to-sky-100 p-6">
+      <Outlet />
+    </div>
+  );
 }
 
 function NotFound() {
